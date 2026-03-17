@@ -11,7 +11,7 @@
     <style>
        :root {
             --rail-blue: #2563eb;
-            --text-main: #111827;
+            --text-main: #ffffff;
             --border-color: #e5e7eb;
             --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
         }
@@ -25,13 +25,13 @@
         .hero {
             position: relative;
             background:
-                        url('https://media.tenor.com/5OssYEoNG4sAAAAM/einstein-smart.gif') no-repeat center center;
+                        url('https://media.tenor.com/fC2hF0Qsd9gAAAAM/angry-heat.gif') no-repeat center center;
             background-size: cover;
             background-position: center;
             height: 450px;
             display: flex;
             align-items: center;
-            color: rgb(0, 0, 0);
+            color: rgb(228, 228, 228);
         }
 
         .hero h1 {
@@ -68,7 +68,7 @@
     <div class="row">
         <div class="col-md-3">
             <h5 class="fw-bold">The Amazing heat index people</h5>
-            <p class="text-muted small">The BEST heat index checker people in Metro Manila.</p>
+            <p class="text-muted small">The BEST heat index checker.</p>
         </div>
         <div class="col-md-3">
             <h6 class="fw-bold">Contact</h6>
@@ -109,6 +109,35 @@
             }
 
         }
+
+        function Humidity() {
+        var kWh = document.getElementById("Humidity").value;
+        let cat1 = "Comfortable"
+        let cat2 = "Average"
+        let cat3 = "Above Average"
+        let cat4 = "Very Hot"
+        let cat5 = "Extrememe Heat"
+            if (isNaN(Humidity) || Humidity <0) {
+                alert("Please enter a valid humidity level.");
+            }
+           
+            else if(kWh>30 && kWh<50){
+                alert("Status: Cool");
+            }    
+                else if(kWh>40 && kWh<60){
+                    alert("Status: Warm");
+                }    
+                else if(kWh>50 && kWh<70){
+                    alert("Status: Hot");
+                }    
+                else if(kWh>60 && kWh<80){
+                    alert("Status: Caution");
+                }    
+                else if(kWh>70- && kWh<100){
+                    alert("Danger");
+                }
+
+            }        
     </script>
     
 </body>
