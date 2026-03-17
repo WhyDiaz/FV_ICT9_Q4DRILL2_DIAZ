@@ -8,32 +8,107 @@
 </head>
 <body>
 
+    <style>
+       :root {
+            --rail-blue: #2563eb;
+            --text-main: #111827;
+            --border-color: #e5e7eb;
+            --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            background-color: white;
+            font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+            color: #1f2937;
+        }
+
+        .hero {
+            position: relative;
+            background:
+                        url('https://media.tenor.com/5OssYEoNG4sAAAAM/einstein-smart.gif') no-repeat center center;
+            background-size: cover;
+            background-position: center;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            color: rgb(0, 0, 0);
+        }
+
+        .hero h1 {
+            font-weight: 700;
+            font-size: 3rem;
+        }
+
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 60px 0 30px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+    <div class="container">
+        <div class="col-lg-7">
+            <h1>The heat index checker</h1>
+            <p class="fs-5 mb-4">The heat index checker of the century</p>
+        </div>
+    </div>
+</section>
+<center>
+
+    <input type="text" class="form-label" id="Humidity" placeholder="Input your Humidity ...">
+    <button class="btn btn-black" onclick="HeatIndex();">Check</button>
+
+</center>
+
+<footer class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <h5 class="fw-bold">The Amazing heat index people</h5>
+            <p class="text-muted small">The BEST heat index checker people in Metro Manila.</p>
+        </div>
+        <div class="col-md-3">
+            <h6 class="fw-bold">Contact</h6>
+            <p class="text-muted small">Email: info@the amazing heat index people.com<br>Phone: 999 657 2370 </p>
+        </div>
+        <div class="col-md-3">
+            <h6 class="fw-bold">Who I am</h6>
+            <p class="text-muted small"> 9 TOPAZ<br>Major Shareholder: Eran James S Diaz</p>
+        </div>
+    </div>
+    <hr>
+    <p class="text-center text-muted small">© 2026 The Amazing heat index people. All rights reserved.</p>
+</footer>
+
     <script>
+        function HeatIndex(){
+            HeatIndex = temperature + (0.33 * humidity) - 4
 
-        function teamRank(){
-            var rank = "1st";
-
-            message = "";
 
             switch (true){
-                case (rank === "1st") :
-                    alert("Champion!");
+                case (Heat === "50") :
+                    alert("Status:Comfortable / Cool");
                     break;
-                case (rank === "2nd") :
-                    alert("Second Place!");
+                case (Heat === "50") :
+                    alert("Status:Comfortable / Cool");
                     break;
-                case (rank === "3rd") :
-                    alert("Third Place!");
+                case (Heat === "3rd") :
+                    alert("Status: Hot");
                     break;
-                case (rank === "4th")  :
-                    alert("Fourth Place!");
+                case (Heat === "4th")  :
+                    alert("Status: Very Hot");
                     break;    
+                case (Heat === "4th")  :
+                    alert("Status: Extremely Hot");
+                    break;      
                 default :
-                message = ("Rank could not be determined");
+                message = ("Status could not be determined");
             }
-               alert(message);
+
         }
-    </script>    
+    </script>
     
 </body>
 </html>
