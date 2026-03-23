@@ -84,31 +84,24 @@
 </footer>
 
     <script>
-        function HeatIndex(){
-            HeatIndex = temperature + (0.33 * humidity) - 4
+        var heatIndex = temperature + (0.33 * humidity) - 4;
 
-
-            switch (true){
-                case (Heat === "50") :
-                    alert("Status:Comfortable / Cool");
-                    break;
-                case (Heat === "50") :
-                    alert("Status:Comfortable / Cool");
-                    break;
-                case (Heat === "3rd") :
-                    alert("Status: Hot");
-                    break;
-                case (Heat === "4th")  :
-                    alert("Status: Very Hot");
-                    break;    
-                case (Heat === "4th")  :
-                    alert("Status: Extremely Hot");
-                    break;      
-                default :
-                message = ("Status could not be determined");
-            }
-
-        }
+    if (heatIndex <= 27) {
+        alert("Heat Index: " + heatIndex.toFixed(2) + "°C - Enjoy the day!");
+    }
+    else if (heatIndex <= 32) {
+        alert("Heat Index: " + heatIndex.toFixed(2) + "°C - Going to be warm");
+    }
+    else if (heatIndex <= 37) {
+        alert("Heat Index: " + heatIndex.toFixed(2) + "°C - It's gonna be hot");
+    }
+    else if (heatIndex <= 41) {
+        alert("Heat Index: " + heatIndex.toFixed(2) + "°C - Very hot.");
+    }
+    else {
+        alert("Heat Index: " + heatIndex.toFixed(2) + "°C - Extreme heat.");
+    }
+}
 
         function Humidity() {
         var kWh = document.getElementById("Humidity").value;
